@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0!important;
+				font-family: "微软雅黑";
+			
+			}
+			.header{
+				border-bottom: 1px solid gray;
+			}
+			.header img{
+				padding: 20px;
+			}
+			.header span{
+				position: relative;
+				bottom: 30px;	
+				font-size: 16px;
+			}
+			.header span:nth-child(3){
+				padding-left: 880px;
+				font-size: 14px;
+			}
+		
+			.bottom{
+			
+				margin-top: 500px;
+				text-align: center;
+			}
+			.bottom p{
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+			.mainpic{
+				width: 49%;
+				float: left;
+			}
+			.mainpic img{
+				margin-left: 300px;
+				margin-top: 200px;
+			}
+			form{
+				width: 300px;
+				border: 1px solid gray;
+				float: left;
+				margin: 100px;
+			
+			}
+			form div{
+				width: 250px;
+				border: 1px solid gray;
+				margin: 0 auto;
+				margin: 20px;
+			}
+			form div>span{
+				padding-left: 55px;
+				color: red;
+			}
+			#tellogin{
+				padding-left: 62px;
+			}
+			form div span>img{
+				width: 16px;
+				position: relative;
+				top: 4px;			
+				}
+			#scanlogin{
+				margin:20px;
+				border: none;
+			}
+			input {
+				border: none;
+				outline: none;
+				margin-bottom: 4px;
+			}
+			form div:nth-child(4){
+				width: 110px;
+				display: inline-block;
+				margin-top: 0;
+				margin-right: 10px;
+				margin-bottom: 0;
+			}
+		
+			
+			#verifycode{
+				width: 80px;
+			}
+			form a{
+				text-decoration: none;
+				font-size: 14px;
+				font-family: "微软雅黑";
+				padding-left: 18px;
+			}
+			#autologin{
+				border: none;
+			}
+			#autologin span{
+				font-family: "微软雅黑";
+				font-size: 14px;
+				color: black;
+				padding-left: 10px;
+			}
+			#autologin input{
+				margin-right: 0;
+			}
+			form button{
+				margin-left: 7%;
+				width: 250px;
+				background-color: rgb(232,78,64);
+				border: none;
+				color: white;
+				padding: 10px;
+				font-family: "微软雅黑";
+				margin-bottom: 10px;
+			}
+			.iconlists{
+				border: none;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			.iconlists img{
+				padding-right: 15px;
+			}
+			.iconlists a{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				color: red;
+				float: right;
+				padding-top: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<img src="images/icon.png"/> 
+			<span>欢迎登陆</span>	
+		</div>
+		<div class="mainpic"><img src="images/icon.png"/></div>		
+		<form>
+			<div id="scanlogin">扫码登陆<span id="tellogin">手机号快速登录</span></div>
+			<div><input type="text"  id="userid" placeholder="手机号/会员/邮箱"/><span ><img src="images/user.png"/></span></div>
+			<div><input type="password" id="password" placeholder="密码"/><span ><img src="images/password.png"/></span></div>
+			<div><input type="text" id="verifycode" placeholder="验证码"/></div>
+			<span>1234</span>
+			<a href="#">忘记密码?</a>
+			<div id="autologin"><input type="checkbox" /><span>自动登录</span></div>
+			<button type="button">登录</button>
+			<div class="iconlists">
+				<img src="images/wechat.png"/>
+				<img src="images/QQ.png"/>
+				<img src="images/sina.png"/>
+				<a href="#">立即注册</a>
+			</div>
+		</form>
+		<div class="bottom">
+			<p>网站备案号</p>
+		</div>
+	</body>
+</html>
