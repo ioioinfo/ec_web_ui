@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+		<style type="text/css">
+			 #t1,
+			#t2,
+			#t3,
+			#t4 {
+				height: 30px;
+				width: 50px;
+				background-color: #33FFFF;
+				float: left;
+				margin-left: 50px;
+				text-align: center;
+			}
+			
+
+		</style>
+			<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#t1,#t2,#t3,#t4").click(function() {
+					$("#t1,#t2,#t3,#t4").css("background-color", "#33ffff") // 初始化背景
+					$(this).css("background-color", "red");
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="t1">
+			<a href="#">1</a>
+		</div>
+		<div id="t2">
+			<a href="#">2</a>
+		</div>
+		<div id="t3">
+			<a href="#">3</a>
+		</div>
+		<div id="t4">
+			<a href="#">4</a>
+		</div>
+	</body>
+
+</html>

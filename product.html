@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.infoimg {
+				float: left;
+				padding: 0 20px 30px 0;
+				position: relative;
+				width: 420px;
+				display: inline-block;
+			}
+			
+			.infoimg img {
+				display: block;
+				height: 420px;
+				width: 420px;
+			}
+			
+			.allImg {
+				height: 58px;
+				margin: 15px 0 0 10px;
+				overflow: hidden;
+				width: 310px;
+			}
+			
+			.allImg img {
+				cursor: pointer;
+				float: left;
+				height: 54px;
+				margin-right: 3px;
+				padding: 2px;
+				width: 54px;
+			}
+			
+			.allImg img.current {
+				border: 1px solid gray;
+				padding: 1px;
+			}
+			
+			.mainImg {
+				position: relative;
+			}
+			
+			.big_pic {
+				background-color: #fff;
+				border: 1px solid #f5f5f5;
+				height: 400px;
+				left: 320px;
+				overflow: hidden;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				width: 400px;
+				display: none;
+			}
+			
+			.prodetail {
+				border: 1px solid gray;
+				width: 400px;
+				float: left;
+				display: inline-block;
+			}
+			
+			button{
+				border: none;
+				background-color: red;
+				padding: 10px;
+				padding-right: 20px;
+				padding-left: 20px;
+				color: white!important;
+				margin-left: 20px;
+				margin-bottom: 10px;
+			}
+			button.collect{
+				background-color: white!important;
+				border: 1px solid salmon!important;
+				color: black!important;
+			}
+			.collect span img{
+				width: 20px!important;
+				height: 20px!important;
+				position: relative;
+				top:5px;
+				padding: 0!important;
+			}
+			.scan img{
+				width: 20px!important;
+				height: 20px!important;
+				position: relative;
+				top:5px;
+				margin-left: 15px;
+			}
+			
+				
+			.color span {
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				margin-right: 10px;
+			}
+			
+			.color span:first-child {
+				background-color: red;
+			}
+			
+			.color span:nth-child(2) {
+				background-color: black;
+			}
+			
+			.color span:nth-child(3) {
+				background-color: blue;
+			}
+			.prodetail{
+				background-color: rgb(245,245,245);
+			}
+			.prodetail p:nth-child(5) {
+				display: inline-block;
+			}
+			
+			.prodetail p:nth-child(6) {
+				display: inline-block;
+			}
+			
+			.size {
+				margin-left: 150px;
+			}
+			
+			.size span {
+				margin-right: 10px;
+			}
+			
+			.size span:first-child {
+				color: black!important;
+				font-size: 14px!important;
+			}
+			
+			del {
+				margin-right: 10px;
+			}
+			
+			p.type span {
+				font-size: 14px!important;
+				color: black!important;
+			}
+			
+			p.type span:last-child {
+				margin-left: 232px;
+			}
+			
+			.system span:first-child {
+				font-size: 14px!important;
+				color: black!important;
+			}
+			
+			.system span:last-child {
+				margin-left: 143px;
+			}
+			
+			.payway img {
+				width: 20px!important;
+				height: 20px!important;
+				padding-right: 10px;
+				position: relative;
+				top: 5px;
+			}
+			
+			.payway span {
+				font-size: 14px!important;
+				font-family: "微软雅黑"!important;
+				color: black!important;
+			}
+			
+			#instock {
+				padding-left: 10px;
+			}
+			
+			.city {
+				display: none;
+			}
+			
+			.city_first {
+				display: inline-block;
+			}
+			
+			.minus,
+			.plus {
+				display: inline-block;
+			}
+			
+			.minus img {
+				width: 20px!important;
+				height: 20px!important;
+				position: relative;
+				top: 5px;
+			}
+			
+			.plus img {
+				width: 20px!important;
+				height: 20px!important;
+				position: relative;
+				top: 5px;
+			}
+			
+			.addminus {
+				display: inline-block;
+				margin-left: 10px;
+			}
+			
+			#proamount {
+				display: inline-block;
+			}
+			.salesmonthly{
+				margin-left: 30px;
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+			.paymonthly{
+				display: inline-block;
+			}
+			.paymonthly span{
+				display: inline-block;
+				margin-left: 10px;
+			}
+			.paymonthly span:first-child{
+				color: black!important;
+				font-size: 14px!important;
+			}
+			#guaranteemore{
+				margin-left: 10px;
+			}
+			.prodetail p>span:nth-child(1) {
+				color: red;
+				font-size: 18px;
+			}
+			
+			.originprice {
+				padding: 18px;
+			}
+			
+			.prodetail p>img {
+				position: relative;
+				top: 4px
+			}
+			
+			ul {
+				list-style-type: none;
+			}
+			
+			#star {
+				position: relative;
+				width: 600px;
+				margin: 20px;
+			}
+			
+			#star ul,
+			#star span {
+				float: left;
+				display: inline;
+				height: 19px;
+				line-height: 19px;
+			}
+			
+			#star ul {
+				margin: 0 10px;
+			}
+			
+			#star li {
+				float: left;
+				width: 24px;
+				cursor: pointer;
+				text-indent: -9999px;
+				background: url(images/star.png) no-repeat;
+			}
+			
+			#star strong {
+				color: #f60;
+				padding-left: 10px;
+			}
+			
+			#star li.on {
+				background-position: 0 -28px;
+			}
+			
+			#star p {
+				position: absolute;
+				top: 20px;
+				width: 159px;
+				height: 60px;
+				display: none;
+				padding: 7px 10px 0;
+			}
+			
+			#star p em {
+				color: #f60;
+				display: block;
+				font-style: normal;
+			}
+			
+			ul,
+			li {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#star {
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+			
+				.prodetail {
+				border: 1px solid gray;
+				width: 550px;
+				float: left;
+			}
+			
+			h3 {
+				border-bottom: 1px solid gray;
+				margin-left: 5px;
+				margin-right: 5px;
+				padding: 18px;
+				padding-top: 0;
+			}
+			
+			p {
+				font-family: "微软雅黑";
+				font-size: 14px;
+				padding-left: 20px;
+			}
+			.outerdiv{
+				width: 90%;
+				margin: 0 auto;
+			}
+			.shopdetail{
+				margin-top: 20px;
+				width: 420px;
+				background-color: rgb(245,245,245);
+				height: 204px;
+			}
+			.shopdetail img{
+				width: 100px;
+				height: 100px;
+				padding-top:30px;
+				display: inline-block;
+				float: left;
+			}
+			.shopdetail span{
+				display: inline-block;
+				float: left;
+				padding-top:40px;
+				margin-left: 20px;
+			}
+			.shopdetail button:nth-child(3){
+				position: relative;
+				top:80px;
+				left: -100px;
+			}
+			.shopdetail button:nth-child(4){
+				position: relative;
+				top:120px;
+				left: -221px;
+			}
+			.shopdetail button:nth-child(5){
+				position: relative;
+				top:75px;
+				
+			}
+			.shopdetail button:nth-child(6){
+				position: relative;
+				top:75px;
+				
+			}
+			.shopdetail button:nth-child(7){
+				position: relative;
+				top:75px;
+			
+			}
+			
+			.rec{
+				width: 970px;
+				float: left;
+				margin-left:68px ;
+			}
+			.rec img{
+				width: 180px;
+				height: 120px;
+			}
+			.rec span{
+				margin: 30px;
+				position: relative;
+				bottom: 40px;
+				font-size: 18px;
+			}
+			
+			.origin{
+				
+				bottom: 60px!important;
+			}
+			
+			.taocan{
+				left: 748px!important;
+			}
+			
+			.proinfolists{
+				width: 970px;
+				float: left;
+				margin-left:68px;
+				border: 1px solid gray;
+				padding: 10px;
+			} 
+			
+			.proinfolists span{
+				display:inline-block ;
+				width: 12.5%;
+				font-family: "微软雅黑";
+			}
+			
+			.detailpic{
+				width: 970px;
+				float: left;
+				margin-left:68px;
+				border: 1px solid gray;
+				padding: 10px;
+				margin-top: 10px;
+			}
+			.detailpic img{
+				
+			}
+			
+			.usercomments{
+				width: 970px;
+				float: left;
+				margin-left:68px;
+				border: 1px solid gray;
+				padding: 10px;
+				margin-top: 10px;
+			}
+			.usercomments p{
+				padding: 10px;
+			}
+			.usercomments p span{
+				margin-left: 20px;
+			}
+			.youmaylike{
+				width: 970px;
+				float: left;
+				margin-left:68px;
+				border: 1px solid gray;
+				padding: 10px;
+				margin-top: 10px;
+			}
+			.youmaylike>span{
+				width: 18%;
+				display: inline-block;
+			}
+			.youmaylike>span>img{
+				width: 100%;
+			}
+			.proname{
+				padding-left: 20px;
+			}
+			.history{
+				width: 970px;
+				float: left;
+				margin-left:68px;
+				border: 1px solid gray;
+				padding: 10px;
+				margin-top: 10px;
+			}
+			.history span{
+				padding-left: 20px;
+			}
+			.guarantee{
+				width: 970px;
+				float: left;
+				margin-left:68px;
+				border: 1px solid gray;
+				padding: 10px;
+				margin-top: 10px;
+			}
+			.guarantee span{
+				width: 15%;
+				display: inline-block;
+			}
+		</style>
+	</head>
+
+	<body>
+	<div class="outerdiv">
+		<div class="infoimg">
+			<div class="mainImg" id="largePicDiv">
+				<img id="largePic" src="images/w1.jpg" alt="" />
+				<div class="zoom_pup" id="move"></div>
+			</div>
+			<div class="allImg">
+				<img src="images/w1.jpg" alt="" />
+				<img src="images/w2.jpg" alt="" />
+				<img src="images/w3.jpg" alt="" />
+				<img src="images/w4.jpg" alt="" />
+				<img src="images/w5.jpg" alt="" />
+			</div>
+			<div class="shopdetail">
+				<img src="images/icon.png"/>
+				<span>店铺地址：</span>
+				<button>查看地图</button>
+				<button>地址1</button>
+				<button>地址2</button>
+				<button>地址3</button>
+				<button>地址4</button>
+			</div>
+		</div>
+
+		<div class="prodetail">
+			<h3>物品名称</h3>
+			<p>物品价格:￥<span>111</span>
+				<span>(降价通知)</span>
+				<img src="images/mobile.png" />
+				<span class="originprice">原价:￥<del>222</del></span><span>（折扣：<span id="discount">5</span>折）</span>
+			</p>
+			<div id="star">
+				<span>物品评分</span>
+				<ul>
+					<li>
+						<a href="javascript:;">1</a>
+					</li>
+					<li>
+						<a href="javascript:;">2</a>
+					</li>
+					<li>
+						<a href="javascript:;">3</a>
+					</li>
+					<li>
+						<a href="javascript:;">4</a>
+					</li>
+					<li>
+						<a href="javascript:;">5</a>
+					</li>
+				</ul>
+				<span></span>
+				<p></p>
+				<span>累计评价：</span><span id="assess">0</span>条
+			</div>
+			<p>优惠：<span>(限购)买一送一，买多少送多少，满200送50金币</span></p>
+			<p class="color">颜色：<span></span><span></span><span></span></p>
+			<p class="size">尺码：<span>X</span><span>XL</span><span>XXL</span><del>XXXL</del></p>
+			<p class="type">类型：<span>S S S</span><span>款式：</span></p>
+			<p class="system">系统：<span>Win7 Win8 Win10</span><span>型号：1 2 3 4 4</span></p>
+			<p>是否提供礼品包装:<input type="checkbox" id="gift" value="" /></p>
+			<p class="payway">付款方式：<span><img src="images/alipay.png"/><img src="images/wechat.png"/><img src="images/bankcard.png"/><span>|货到付款</span></span>
+			</p>
+			<p>送货至：
+				<select id="province">
+					<option>----请选择省份----</option>
+					<option>北京</option>
+					<option>上海</option>
+					<option>江苏</option>
+				</select>
+				<select class="city city_first">
+					<option>----请选择城市----</option>
+				</select>
+
+				<select class="city">
+					<option>----请选择城市----</option>
+					<option>东城</option>
+					<option>西城</option>
+					<option>崇文</option>
+					<option>宣武</option>
+					<option>朝阳</option>
+				</select>
+				<select class="city">
+					<option>----请选择城市----</option>
+					<option>黄浦</option>
+					<option>卢湾</option>
+					<option>徐汇</option>
+					<option>长宁</option>
+					<option>静安</option>
+				</select>
+				<select class="city">
+					<option>----请选择城市----</option>
+					<option>南京</option>
+					<option>镇江</option>
+					<option>苏州</option>
+					<option>南通</option>
+					<option>扬州</option>
+				</select>
+				<span id="instock">有货</span>
+			</p>
+			<p id="proamount">
+				数量:
+				<input id="min" name="" type="button" value="-" />
+				<select id="amount">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+				<input id="add" name="" type="button" value="+" />
+			</p>
+			<span class="salesmonthly">月销量：</span><span id="salesmonthly">9999 </span><br />
+			<p class="paymonthly">免息分期：<span>12期分期</span><span>24期分期</span><span>36期分期</span>
+				<select name="" id="guaranteemore">
+					<option value="1">一年 延保</option>
+					<option value="2">两年 延保</option>
+					<option value="3">三年 延保</option>
+				</select>
+			</p><br />
+			<button>点击购买</button><button>加入购物车</button><button>预约红包</button><button>点击咨询</button><button>到货通知</button><button class="collect"><span><img src="images/love.png"/></span>点击收藏</button>
+			<span class="scan"><img src="images/two-dimension.png"/></span>扫码优惠
+			<p>温馨提示：本商品不能使用券，支持7天无理由退货</p>
+			<p>本店承诺：购买产品一年内出现任何问题包换，支持全包保修</p>
+		</div>	
+	</div>
+	
+		<div class="rec">
+			<h2>推荐购买套餐</h2>
+			<img src="images/icon.png"/><span>+</span><img src="images/icon.png"/><span>+</span><img src="images/icon.png"/><span>=</span><span class="origin">商品原价：3456</span><span class="taocan">套餐价格：2345</span>
+		</div>
+		
+		<div>
+			<div class="proinfolists"><span>商品描述</span><span>提示</span><span>售后保障</span><span>用户评论</span><span>品牌故事</span><span>你问我答</span></div>
+			<div class="proinfolists"><span>产地：上海</span><span>净含量：10g</span><span>酒精度:52</span><span>等级：1级</span><span>规格：A</span><span>类型：好</span><span>箱规：A</span>
+				<span>原料：水</span><span>品牌：S</span><span>款式：赞</span><span>长：100</span><span>宽：100</span><span>高:100</span><span>条形码：|||||</span>
+				<span>色系：蓝</span><span>机芯：铁</span><span>功能：强</span><span>证书：A</span><span>材质：纸</span><span>净重：99</span><span>批准文号：1111</span>
+				<span>温馨提示：</span>
+			</div>
+		</div>
+		
+		<div class="detailpic">
+			<img src="images/icon.png"/>
+		</div>
+		<div class="detailpic">
+			<img src="images/icon.png"/>
+		</div>
+		
+		<div class="usercomments">
+			<p>用户评价：</p>
+			<p>有图(100+)<span>无图(200+)</span></p>
+			<p>XXX<span>(2016.12.03)</span></p>
+			<p>标签:</p>
+			<p>店铺:</p>
+		</div>
+		
+		<div class="youmaylike">
+			<p>猜你喜欢:</p>
+			<span><img src="images/icon.png"/><span class="proname">商品名称：XXX</span></span>
+			<span><img src="images/icon.png"/><span class="proname">商品名称：XXX</span></span>
+			<span><img src="images/icon.png"/><span class="proname">商品名称：XXX</span></span>
+			<span><img src="images/icon.png"/><span class="proname">商品名称：XXX</span></span>
+			<span><img src="images/icon.png"/><span class="proname">商品名称：XXX</span></span>
+		</div>
+		
+		<div class="history">
+			<p>阅览记录：</p>
+			<span><img src="images/icon.png"/></span>
+			<span><img src="images/icon.png"/></span>
+		</div>
+		<div class="guarantee">
+			<span>100%正品保证</span>
+			<span>7天无理由退货</span>
+			<span>满99包邮</span>
+			<span>积分抵现金</span>
+			<span>支持开箱验货</span>
+			<span>就近发货</span>
+		</div>
+		<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			//切换图片
+			$(".allImg img").click(function() {
+				$(".allImg img").removeClass("current");
+				$(this).addClass("current");
+				var src = $(this).attr("src");
+				$("#largePic").attr("src", src.replace());
+			});
+
+			window.onload = function() {
+				var oStar = document.getElementById("star");
+				var aLi = oStar.getElementsByTagName("li");
+				var oUl = oStar.getElementsByTagName("ul")[0];
+				var oSpan = oStar.getElementsByTagName("span")[1];
+				var oP = oStar.getElementsByTagName("p")[0];
+				var i = iScore = iStar = 0;
+				/**	var aMsg = [
+						"很不满意|差得太离谱，与卖家描述的严重不符，非常不满",
+						"不满意|部分有破损，与卖家描述的不符，不满意",
+						"一般|质量一般，没有卖家描述的那么好",
+						"满意|质量不错，与卖家描述的基本一致，还是挺满意的",
+						"非常满意|质量非常好，与卖家描述的完全一致，非常满意"
+					]
+					for(i = 1; i <= aLi.length; i++) {
+						aLi[i - 1].index = i;
+						//鼠标移过显示分数
+						aLi[i - 1].onmouseover = function() {
+							fnPoint(this.index);
+							//浮动层显示
+							oP.style.display = "block";
+							//计算浮动层位置
+							oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 104 + "px";
+							//匹配浮动层文字内容
+							oP.innerHTML = "<em><b>" + this.index + "</b> 分 " + aMsg[this.index - 1].match(/(.+)\|/)[1] + "</em>" + aMsg[this.index - 1].match(/\|(.+)/)[1]
+						};
+				**/
+				//鼠标离开后恢复上次评分
+				/**
+				aLi[i - 1].onmouseout = function() {
+					fnPoint();
+					//关闭浮动层
+					oP.style.display = "none"
+				};
+				**/
+				//点击后进行评分处理
+				/**
+					aLi[i - 1].onclick = function() {
+						iStar = this.index;
+						oP.style.display = "none";
+						// oSpan.innerHTML = "<strong>" + (this.index) + " 分</strong> (" + aMsg[this.index - 1].match(/\|(.+)/)[1] + ")"
+					}
+				}
+				**/
+				//评分处理
+				function fnPoint(iArg) {
+					//分数赋值
+					iScore = iArg || iStar;
+					for(i = 0; i < aLi.length; i++)
+						aLi[i].className = i < iScore ? "on" : "";
+				}
+			};
+
+			//jQuery 代码(将所有的p标记换成b标记）:
+			//window.onload = function(){
+			//	$("p.size span").replaceWith("<del>XL</del>");
+			//};
+			$(document).ready(function() {
+				$("#province").change(function() {
+					var index = $(this).get(0).selectedIndex;
+					$('.city').hide().eq(index).show();
+				});
+			});
+			
+			//数量加减
+			$(function() {
+				var t = $("#amount");
+				$("#add").click(function() {
+					t.val(parseInt(t.val()) + 1)			
+				})
+				$("#min").click(function() {
+					t.val(parseInt(t.val()) - 1)			
+				})
+			});
+			
+
+		</script>
+
+	</body>
+
+</html>
