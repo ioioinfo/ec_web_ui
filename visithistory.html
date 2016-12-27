@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.left {
+				width: 180px;
+				float: left;
+				background-color: rgb(245, 245, 245);
+				font-family: "微软雅黑";
+				font-size: 14px;
+				text-align: center;
+
+			}
+			
+			.left div {
+				border: 1px solid gray;
+				padding: 10px;
+			}
+			
+			.usericon img {
+				width: 80px;
+				height: 80px;
+			}
+			
+			.rightarr img {
+				position: relative;
+				top: 5px;
+			}
+			
+			.right {
+				width: 800px;
+				float: left;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				text-align: center;
+				border: 1px solid gray;
+				margin-left: 20px;
+				display: inline-block;
+				float: left;
+				
+			}
+			
+			.first {
+				text-align: left;
+				color: deeppink;
+				padding: 10px;
+				background-color: rgb(199, 199, 199);
+			}
+			
+			.record {
+				text-align: left;
+				margin-left: 30px;
+				padding: 10px;
+			}
+			
+			.year {
+				border: 1px solid gray;
+				width: 50px;
+				background-color: deeppink;
+				color: white;
+				padding: 5px;
+				margin-left: 40px;
+				border-bottom: 0;
+				margin-top: -4px;
+				margin-bottom: 0;
+			}
+			
+			.month {
+				border: 1px solid gray;
+				width: 50px;
+				padding: 5px;
+				margin-left: 40px;
+			}
+			
+			.line {
+				width: 40px;
+				margin-left: 50px;
+			}
+			
+			
+			.visitdetail {
+				float: left;
+				text-align: left;
+				margin-left: 40px;
+				margin-top: 30px;
+				clear: right;
+			}
+			
+			.timing {
+				background-color: white!important;
+				float: left;
+				display: inline-block;
+		
+			
+			}
+			
+			.visitdetail div a {
+				font-size: 12px;
+				font-family: "微软雅黑";
+				padding-left: 30px;
+			}
+			
+			.visitdetail img {
+				width: 120px;
+				height: 50px;
+				margin-top: 30px;
+			}
+			
+			.price {
+				color: deeppink;
+				padding: 10px 0;
+			}
+			
+			.proname {
+				font-family: "微软雅黑";
+				font-size: 12px;
+			}
+			.content{
+				clear: both;
+			}
+			.visitdetail:last-child{
+				margin-bottom: 60px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="left">
+			<div>个人中心</div>
+			<div class="usericon"><img src="images/userlarger.png" /></div>
+			<div class="rightarr"><img src="images/rightarr.png" />订单管理</div>
+			<div>个人中心</div>
+			<div>我的订单</div>
+			<div>我的收藏</div>
+			<div>我的退换货</div>
+			<div>我的预览</div>
+			<div>地址管理</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>优惠券</div>
+			<div>我的优惠券</div>
+			<div>我的VIP</div>
+			<div>兑换礼品卡</div>
+			<div>我的现金券</div>
+			<div>我的会员卡</div>
+			<div>中奖记录</div>
+			<div>积分细则</div>
+			<div>会员简介</div>
+			<div>电子礼品卡</div>
+			<div>团购卡</div>
+			<div>我的红包</div>
+			<div>我的积分</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>我的银行卡</div>
+			<div>充值</div>
+			<div>提现</div>
+			<div>账户明细</div>
+			<div>资金管理</div>
+			<div>我的充值余额</div>
+			<div>第三方平台账户</div>
+			<div>我的返现</div>
+			<div>快捷支付</div>
+			<div>中奖记录</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>我的发票</div>
+			<div>中奖记录</div>
+			<div>补开发票</div>
+			<div>增值发票</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>账户安全</div>
+			<div>个人资料</div>
+			<div>账户安全</div>
+			<div>身份证管理</div>
+			<div>修改密码</div>
+			<div>账户绑定</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>其他部分</div>
+			<div>我的咨询</div>
+			<div>在线客服</div>
+			<div>我的留言</div>
+			<div>我的评论</div>
+			<div>阅览历史</div>
+			<div>我的问卷</div>
+			<div>私人订制</div>
+			<div>我的投稿</div>
+			<div>消息</div>
+			<div>订阅中心</div>
+			<div>为我推荐</div>
+			<div>促销通知</div>
+		</div>
+		<div class="right">
+			<div class="first">阅览历史</div>
+			<div class="record">阅览记录</div>
+
+			<div class="content">
+				<div class="timing">
+					<div class="year">2016</div>
+					<div class="month">01-01</div>
+					<div class="line"><img src="images/line.png" /></div>
+				</div>
+				<div class="visitdetail">
+					<div class="weekday">星期N<a href="#">删除</a></div>
+					<img src="images/f3.jpg" />
+					<div class="price">￥111</div>
+					<div class="proname">商品名字</div>
+				</div>
+				<div class="visitdetail">
+					<div class="weekday">星期N<a href="#">删除</a></div>
+					<img src="images/f3.jpg" />
+					<div class="price">￥111</div>
+					<div class="proname">商品名字</div>
+				</div>
+			</div>
+			
+			<div class="content">
+				<div class="timing">
+					<div class="year">2016</div>
+					<div class="month">02-01</div>
+					<div class="line"><img src="images/line.png" /></div>
+				</div>
+				<div class="visitdetail">
+					<div class="weekday">星期N<a href="#">删除</a></div>
+					<img src="images/f3.jpg" />
+					<div class="price">￥111</div>
+					<div class="proname">商品名字</div>
+				</div>
+				<div class="visitdetail">
+					<div class="weekday">星期N<a href="#">删除</a></div>
+					<img src="images/f3.jpg" />
+					<div class="price">￥111</div>
+					<div class="proname">商品名字</div>
+				</div>
+			</div>
+			
+			<div class="content">
+				<div class="timing">
+					<div class="year">2016</div>
+					<div class="month">03-01</div>
+					<div class="line"><img src="images/line.png" /></div>
+				</div>
+				<div class="visitdetail">
+					<div class="weekday">星期N<a href="#">删除</a></div>
+					<img src="images/f3.jpg" />
+					<div class="price">￥111</div>
+					<div class="proname">商品名字</div>
+				</div>
+				<div class="visitdetail">
+					<div class="weekday">星期N<a href="#">删除</a></div>
+					<img src="images/f3.jpg" />
+					<div class="price">￥111</div>
+					<div class="proname">商品名字</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+		</div>
+		<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$(".visitdetail a").click(function(){
+					$(this).parent().parent().remove();
+				})
+			});
+			
+			$(function(){
+				if(".content:last"){
+					$(".line:last").css("display","none");
+				}
+			});
+			
+		</script>
+	</body>
+
+</html>
