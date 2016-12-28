@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.left {
+				width: 180px;
+				float: left;
+				background-color: rgb(245, 245, 245);
+				font-family: "微软雅黑";
+				font-size: 14px;
+				text-align: center;
+			}
+			
+			.left div {
+				border: 1px solid gray;
+				padding: 10px;
+			}
+			
+			.usericon img {
+				width: 80px;
+				height: 80px;
+			}
+			
+			.rightarr img {
+				position: relative;
+				top: 5px;
+			}
+			
+			.right {
+				width: 800px;
+				float: left;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				text-align: center;
+				margin-left: 20px;
+			}
+			
+			.rightarr{
+				background-color: rgb(199,199,199);
+			}
+			
+			.fir{
+				background-color: rgb(199,199,199);
+				text-align: left;
+				padding: 10px;
+			}
+			.right div:nth-child(2){
+				padding: 10px;
+				text-align: left;
+			}
+			.low,.mid,.high{
+				width: 60px;
+				height: 5px;
+			}
+			ul li{
+				display: inline-block;
+				float: left;
+				width: 40px;
+				height: 5px;
+				position: relative;
+				bottom: 25px;
+				left: 30px;
+			}
+			ul li:first-child{
+				background-color: red;
+			}
+			ul li:nth-child(2){
+				background-color: orange;
+			}
+			ul li:last-child{
+				background-color: greenyellow;
+			}
+			#degree{
+				position: relative;
+				bottom: 33px;
+				left: 40px;
+			}
+			.pwd span:nth-child(2){
+				display: inline-block;
+				position: relative;
+				bottom: 3px;
+				left: 20px;
+				border-right: 1px solid gray;
+				padding: 10px 30px 10px 0;
+				
+			}
+			.pwd span:nth-child(3){
+				position: relative;
+				bottom: 3px;
+				color: red;
+				left: 30px;
+			}
+			.pwd span:nth-child(4){
+				position: relative;
+				bottom: 3px;
+				left: 160px;
+			}
+			.pwd{
+				text-align: left;	
+				padding: 10px;
+			}
+			.btm-content{
+				margin-top: 20px;
+				border-bottom: 1px solid gray;
+				border-top: 1px solid gray;
+				padding: 20px 0;
+			}
+			.email{
+				text-align: left;	
+				padding: 10px;
+			}
+			.email span:nth-child(2){
+				display: inline-block;
+				position: relative;
+				bottom: 3px;
+				left: 20px;
+				border-right: 1px solid gray;
+				padding: 10px 30px 10px 0;	
+			}
+			.email span:nth-child(3){
+				position: relative;
+				bottom: 3px;
+				left: 30px;
+				width: 392px;
+				display: inline-block;
+			}
+			.email span:nth-child(4){
+				position: relative;
+				bottom: 3px;
+				left: 160px;
+			}
+			.verify{
+				text-align: left;	
+				padding: 10px;
+			}
+			.verify span:nth-child(2){
+				display: inline-block;
+				position: relative;
+				bottom: 3px;
+				left: 20px;
+				border-right: 1px solid gray;
+				padding: 10px 30px 10px 0;	
+			}
+			.verify span:nth-child(3){
+				position: relative;
+				top: 6px;
+				left: 30px;
+				width: 392px;
+				display: inline-block;
+			}
+			.verify span:nth-child(4){
+				position: relative;
+				bottom: 3px;
+				left: 160px;
+			}
+			.paypwd{
+				text-align: left;	
+				padding: 10px;
+			}
+			.paypwd span:nth-child(2){
+				display: inline-block;
+				position: relative;
+				bottom: 3px;
+				left: 20px;
+				border-right: 1px solid gray;
+				padding: 10px 30px 10px 0;	
+			}
+			.paypwd span:nth-child(3){
+				position: relative;
+				bottom: 3px;
+				left: 30px;
+				width: 392px;
+				display: inline-block;
+			}
+			.paypwd span:nth-child(4){
+				position: relative;
+				bottom: 3px;
+				left: 144px;
+				border: 1px solid gray;
+				padding: 5px;
+				border-radius: 10px;
+			}
+			.verifypersonal{
+				text-align: left;	
+				padding: 10px;
+			}
+			.verifypersonal span:nth-child(2){
+				display: inline-block;
+				position: relative;
+				bottom: 3px;
+				left: 20px;
+				border-right: 1px solid gray;
+				padding: 10px 30px 10px 0;	
+			}
+			.verifypersonal span:nth-child(3){
+				position: relative;
+				top:6px;
+				left: 30px;
+				width: 392px;
+				display: inline-block;
+			}
+			.verifypersonal span:nth-child(4){
+				position: relative;
+				bottom: 3px;
+				left: 144px;
+				border: 1px solid gray;
+				padding: 5px;
+				border-radius: 10px;
+			}
+			.numberverify{
+				text-align: left;	
+				padding: 10px;
+			}
+			.numberverify span:nth-child(2){
+				display: inline-block;
+				position: relative;
+				bottom: 3px;
+				left: 20px;
+				border-right: 1px solid gray;
+				padding: 10px 30px 10px 0;	
+			}
+			.numberverify span:nth-child(3){
+				position: relative;
+				top: 6px;
+				left: 30px;
+				width: 392px;
+				display: inline-block;
+			}
+			.numberverify span:nth-child(4){
+				position: relative;
+				bottom: 3px;
+				left: 144px;
+				border: 1px solid gray;
+				padding: 5px;
+				border-radius: 10px;
+			}
+			h2{
+				text-align: left;
+				
+			}
+			h5{
+				color: gray;
+				text-align: left;
+				padding-left: 30px;
+			}
+			.btm-outside{
+				border: 1px solid gray;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="left">
+			<div>个人中心</div>
+			<div class="usericon"><img src="images/userlarger.png" /></div>
+			<div class="rightarr"><img src="images/rightarr.png" />订单管理</div>
+			<div>个人中心</div>
+			<div>我的订单</div>
+			<div>我的收藏</div>
+			<div>我的退换货</div>
+			<div>我的预览</div>
+			<div>地址管理</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>优惠券</div>
+			<div>我的优惠券</div>
+			<div>我的VIP</div>
+			<div>兑换礼品卡</div>
+			<div>我的现金券</div>
+			<div>我的会员卡</div>
+			<div>中奖记录</div>
+			<div>积分细则</div>
+			<div>会员简介</div>
+			<div>电子礼品卡</div>
+			<div>团购卡</div>
+			<div>我的红包</div>
+			<div>我的积分</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>我的银行卡</div>
+			<div>充值</div>
+			<div>提现</div>
+			<div>账户明细</div>
+			<div>资金管理</div>
+			<div>我的充值余额</div>
+			<div>第三方平台账户</div>
+			<div>我的返现</div>
+			<div>快捷支付</div>
+			<div>中奖记录</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>我的发票</div>
+			<div>中奖记录</div>
+			<div>补开发票</div>
+			<div>增值发票</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>账户安全</div>
+			<div>个人资料</div>
+			<div>账户安全</div>
+			<div>身份证管理</div>
+			<div>修改密码</div>
+			<div>账户绑定</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>其他部分</div>
+			<div>我的咨询</div>
+			<div>在线客服</div>
+			<div>我的留言</div>
+			<div>我的评论</div>
+			<div>阅览历史</div>
+			<div>我的问卷</div>
+			<div>私人订制</div>
+			<div>我的投稿</div>
+			<div>消息</div>
+			<div>订阅中心</div>
+			<div>为我推荐</div>
+			<div>促销通知</div>
+		</div>
+		<div class="right">
+			<div class="fir">安全中心</div>
+			<div class="btm-outside">
+			<div>安全级别
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<span id="degree">高级</span>
+			</div>
+		<div class="pwd">
+			<img src="images/tig.png"/><span>登录密码</span>
+			<span>互联网账号存在被盗风险，建议您定期更改密码以保护账号安全</span>
+			<span>修改</span>
+		</div>
+		<div class="btm-content">
+			<div class="email">
+			<img src="images/tig.png"/><span>邮箱验证</span>
+			<span>您验证的邮箱：39*****38@qq.com</span>
+			<span>修改</span>
+			</div>
+			<div class="verify">
+			<img src="images/tig.png"/><span>手机验证</span>
+			<span>您验证的手机：181*****232若已丢失或停用，请立即停用，避免账号被盗</span>
+			<span>修改</span>
+			</div>
+			<div class="paypwd">
+			<img src="images/warning.png"/><span>支付密码</span>
+			<span>实名认证后您可以开启支付密码，保障虚拟资产安全</span>
+			<span>立即启用</span>
+			</div>
+			<div class="verifypersonal">
+			<img src="images/warning.png"/><span>实名认证</span>
+			<span>实名认证后，可通过实名信息找回支付密码，修改手机等等，提高账户安全性</span>
+			<span>立即启用</span>
+			</div>
+			<div class="numberverify">
+			<img src="images/warning.png"/><span>数字认证</span>
+			<span>启用数字认证，修改密码等账户安全操作将设备商只能在安装了数字证书的设备上操作</span>
+			<span>立即启用</span>
+			</div>	
+		</div>
+		<h2>安全提示服务</h2>
+		<h5>1.确认您登陆的是正确网站而非钓鱼网站，各种手机通讯短信，谨防诈骗。</h5>
+		<h5>2.建议安装杀毒软件，并定期更新操作系统补丁，确保账户及交易安全。</h5>
+		</div>
+	</body>
+
+</html>

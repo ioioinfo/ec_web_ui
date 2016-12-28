@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background-color: rgb(240, 240, 240);
+			}
+			
+			.outerdiv {
+				width: 60%;
+				margin: 0 auto;
+			}
+			
+			.status-circle {
+				width: 10px;
+				height: 10px;
+				border-radius: 5px;
+				background-color: red;
+				display: inline-block;
+				float: left;
+				margin-top: 25px;
+			}
+			
+			h3 {
+				display: inline-block;
+				float: left;
+			}
+			
+			.horizontal {
+				position: relative;
+				top: 13px;
+				left: -1px;
+				color: gray;
+			}
+			
+			.status-circle:first-child {
+				position: relative;
+				left: 19px;
+			}
+			
+			.status-circle:nth-child(3) {
+				position: relative;
+				left: 169px;
+			}
+			
+			.status-circle:nth-child(5) {
+				position: relative;
+				left: 318px;
+			}
+			
+			.status-div {
+				margin-left: 300px;
+			}
+			
+			ul {
+				width: 60%;
+				background-color: white;
+				margin: 0 auto;
+				margin-top: 30px;
+				list-style: none;
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+		
+		</style>
+	</head>
+
+	<body>
+		<div class="outerdiv">
+			<h3>我的购物车</h3>
+			<div class="status-div">
+				<span><span class="status-circle"></span>
+				<span class="horizontal">___________________</span>
+				<span class="status-circle"></span>
+				<span class="horizontal">___________________</span>
+				<span class="status-circle"></span>
+				</span>
+			</div>
+		</div>
+		
+		
+	</body>
+
+</html>

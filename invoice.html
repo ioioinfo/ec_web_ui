@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.left {
+				width: 180px;
+				float: left;
+				background-color: rgb(245, 245, 245);
+				font-family: "微软雅黑";
+				font-size: 14px;
+				text-align: center;
+			}
+			
+			.left div {
+				border: 1px solid gray;
+				padding: 10px;
+			}
+			
+			.usericon img {
+				width: 80px;
+				height: 80px;
+			}
+			
+			.rightarr img {
+				position: relative;
+				top: 5px;
+			}
+			
+			.right {
+				width: 800px;
+				float: left;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				border: 1px solid gray;
+				margin-left: 20px;
+				padding: 0 0 5px 10px;
+			}
+			
+			.first {
+				text-align: left;
+				color: deeppink;
+				padding: 10px;
+				background-color: rgb(199, 199, 199);
+			}
+			
+			
+			.outside {
+				border: 1px solid gray;
+			}
+			
+			input{
+				margin: 10px 0;
+				padding: 5px;
+			}
+			label{
+				margin-left: 40px;
+			}
+			#verify-code{
+				position: relative;
+				left: -32px;
+			}
+			#confirm{
+				margin-left: 114px;
+			}
+			.rightarr{
+				background-color: rgb(199,199,199);
+			}
+			button{
+				background-color: rgb(237,237,237);
+				border: 1px solid gray;
+				padding: 6px 20px;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				margin-left: 30px;
+				margin-bottom: 30px;
+			}
+			.invoice-info{
+				border: 1px solid gray;
+				float: left;
+				margin-left: 20px;
+				width: 812px;
+				margin-top: 40px;
+			}
+			h3{
+				padding: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="left">
+			<div>个人中心</div>
+			<div class="usericon"><img src="images/userlarger.png" /></div>
+			<div class="rightarr"><img src="images/rightarr.png" />订单管理</div>
+			<div>个人中心</div>
+			<div>我的订单</div>
+			<div>我的收藏</div>
+			<div>我的退换货</div>
+			<div>我的预览</div>
+			<div>地址管理</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>优惠券</div>
+			<div>我的优惠券</div>
+			<div>我的VIP</div>
+			<div>兑换礼品卡</div>
+			<div>我的现金券</div>
+			<div>我的会员卡</div>
+			<div>中奖记录</div>
+			<div>积分细则</div>
+			<div>会员简介</div>
+			<div>电子礼品卡</div>
+			<div>团购卡</div>
+			<div>我的红包</div>
+			<div>我的积分</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>我的银行卡</div>
+			<div>充值</div>
+			<div>提现</div>
+			<div>账户明细</div>
+			<div>资金管理</div>
+			<div>我的充值余额</div>
+			<div>第三方平台账户</div>
+			<div>我的返现</div>
+			<div>快捷支付</div>
+			<div>中奖记录</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>我的发票</div>
+			<div>中奖记录</div>
+			<div>补开发票</div>
+			<div>增值发票</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>账户安全</div>
+			<div>个人资料</div>
+			<div>账户安全</div>
+			<div>身份证管理</div>
+			<div>修改密码</div>
+			<div>账户绑定</div>
+			<div class="rightarr"><img src="images/rightarr.png" /><span></span>其他部分</div>
+			<div>我的咨询</div>
+			<div>在线客服</div>
+			<div>我的留言</div>
+			<div>我的评论</div>
+			<div>阅览历史</div>
+			<div>我的问卷</div>
+			<div>私人订制</div>
+			<div>我的投稿</div>
+			<div>消息</div>
+			<div>订阅中心</div>
+			<div>为我推荐</div>
+			<div>促销通知</div>
+		</div>
+		<div class="right">
+			<h3>资产增值</h3>
+			<h5>1)注意有效增值税发票开票资质仅为一个</h5>
+			<h5>2)发票常见问题查看增值资质帮助。<br/>我们会在一个工作日内完成审核。</h5>
+		</div>
+		
+		<div class="invoice-info">
+			<h3>填写增票资质信息(所有信息均为必填)</h3>
+			<label for="companyname">单位名称：</label>
+			<input type="text" name="" id="companyname" value="" />
+			<br />
+			<label for="verify-code" style="position: relative;left: -28px;">纳税人识别码：</label>
+			<input type="text" name="" id="verify-code" value="" />
+			<br />
+			<label for="registery-address">注册地址：</label>
+			<input type="text" name="" id="registery-address" value="" />
+			<br />
+			<label for="registery-tel">注册电话：</label>
+			<input type="text" name="" id="registery-tel" value="" />
+			<br />
+			<label for="registery-bank">开户银行：</label>
+			<input type="text" name="" id="registery-bank" value="" />
+			<br />
+			<label for="bankcard">银行账户：</label>
+			<input type="text" name="" id="bankcard" value="" />
+			<br />
+			<button id="confirm">确认</button> <button id="cancel">取消</button>
+		</div>	
+		
+	</body>
+
+</html>
