@@ -14,45 +14,9 @@
 				margin: 0 auto;
 			}
 			
-			.status-circle {
-				width: 10px;
-				height: 10px;
-				border-radius: 5px;
-				background-color: red;
-				display: inline-block;
-				float: left;
-				margin-top: 25px;
-			}
-			
 			h3 {
 				display: inline-block;
 				float: left;
-			}
-			
-			.horizontal {
-				position: relative;
-				top: 13px;
-				left: -1px;
-				color: gray;
-			}
-			
-			.status-circle:first-child {
-				position: relative;
-				left: 19px;
-			}
-			
-			.status-circle:nth-child(3) {
-				position: relative;
-				left: 169px;
-			}
-			
-			.status-circle:nth-child(5) {
-				position: relative;
-				left: 318px;
-			}
-			
-			.status-div {
-				margin-left: 300px;
 			}
 			
 			form {
@@ -66,12 +30,14 @@
 				font-family: "微软雅黑";
 				font-size: 14px;
 				border: 1px solid gray;
-    			border-spacing: 0;
-    			margin-left: -40px;	
+				border-spacing: 0;
+				margin-left: -40px;
 			}
-			tr:last-child{
+			
+			tr:last-child {
 				border-bottom: none!important;
 			}
+			
 			.first-td {
 				width: 60px;
 				padding-left: 100px;
@@ -87,61 +53,38 @@
 				padding-left: 20px;
 			}
 			
-			.fourth-td {
-				width: 60px;
-				padding-left: 40px;
-				text-align: center;
-			}
 			
-			.fifth-td {
+			.fourth-td {
 				padding: 0 20px;
 				width: 120px;
 				text-align: center;
 			}
 			
-			.sixth-td {
+			.fifth-td {
 				margin-left: -20px!important;
 				width: 80px;
 				text-align: center;
 			}
 			
-			.seventh-td {
+			.sixth-td {
 				width: 75px;
 				text-align: center;
+				padding-left: 40px;
 			}
-			
-			#add {
-				background-color: white;
-				border: 1px solid gray;
-				border-left: none;
-				position: relative;
-				right: 5px;
-			}
-			
-			#min {
-				background-color: white;
-				border: 1px solid gray;
-				border-right: none;
-				position: relative;
-				left: 6px;
-			}
-			
+	
 			#amount {
 				width: 40px;
 				text-align: center;
-				border: 1px solid gray;
-				border-left: none;
-				border-right: none;
 			}
 			
-			#move {
+			#saysth {
 				position: absolute;
 				top: 15px;
-				right: 0;
+				right: 10px;
 				white-space: nowrap;
 			}
 			
-			#del {
+			.del {
 				position: relative;
 				bottom: 10px;
 			}
@@ -163,6 +106,7 @@
 			tr {
 				border-bottom: 1px solid gray!important;
 				display: inline-block;
+				width: 100%;
 			}
 			
 			.integral-award {
@@ -184,34 +128,57 @@
 				margin-left: -30px!important;
 			}
 			
-			.bottom-tr {
-				padding: 10px;
-			}
-			
-		
+
 			#calculate {
 				background-color: rgb(232, 78, 64);
 				border: 1px solid rgb(232, 78, 64);
 				color: white;
 				font-family: "微软雅黑";
 				font-size: 14px;
-				padding:2px 29px;
+				padding: 2px 29px;
 				border-radius: 4px;
+			}
+			
+			.outerdiv a {
+				text-decoration: none;
+				font-size: 1.17em;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				font-weight: bold;
+				color: black;
+				position: relative;
+				top: 19px;
+				padding-left: 30px;
+			}
+			a:first-child{
+				padding-left: 0;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			input{
+				outline: none;
+			}
+			a:last-child{
+				text-align: right;
+				font-weight: 200;
+				padding-left: 250px;
+				font-size: 14px;
 			}
 		</style>
 	</head>
 
 	<body>
 		<div class="outerdiv">
-			<h3>我的购物车</h3>
-			<div class="status-div">
-				<span><span class="status-circle"></span>
-				<span class="horizontal">___________________</span>
-				<span class="status-circle"></span>
-				<span class="horizontal">___________________</span>
-				<span class="status-circle"></span>
-				</span>
-			</div>
+			<a href="#">已买到商品</a>
+			<a href="#">未付款</a>
+			<a href="#">待发货</a>
+			<a href="#">待收货</a>
+			<a href="#">待评价</a>
+			<a href="#">订单回收站</a>
 		</div>
 		<form name="form1" method="post" action="">
 			<table width="830" border="0">
@@ -220,10 +187,9 @@
 						<INPUT name="chkAll" id="chkAll" title="全选" onClick="ChkAllClick('chkSon','chkAll')" type="checkbox" />全选</td>
 					<td class="second-td">物品信息 </td>
 					<td class="third-td">单价(元)</td>
-					<td class="fourth-td">金币</td>
-					<td class="fifth-td">数量</td>
-					<td class="sixth-td">金额(元)</td>
-					<td class="seventh-td">操作</td>
+					<td class="fourth-td">数量</td>
+					<td class="fifth-td">交易状态</td>
+					<td class="sixth-td">操作</td>
 				</tr>
 				<tr>
 					<td class="first-td">
@@ -231,18 +197,15 @@
 					</td>
 					<td class="second-td"> <img src="images/icon.png" /> </td>
 					<td id="singleprice" class="third-td">￥111</td>
-					<td class="fourth-td">0</td>
-					<td class="fifth-td">
+					<td class="fourth-td">
 						<p id="proamount">
-							<input id="min" name="" type="button" value="-" />
-							<input type="text" id="amount" value="1" />
-							<input id="add" name="" type="button" value="+" />
+							1
 						</p>
 					</td>
-					<td id="totalprice" class="sixth-td">￥111</td>
-					<td id="deal" class="seventh-td">
-						<a href="#" id="del">删除</a>
-						<a href="#" id="move">移到购物车</a>
+					<td id="totalprice" class="fifth-td">￥111</td>
+					<td id="deal" class="sixth-td">
+						<a href="#" class="del">删除</a>
+						<a href="#" id="saysth">追加评论</a>
 					</td>
 				</tr>
 				<tr>
@@ -251,28 +214,18 @@
 					</td>
 					<td class="second-td"> <img src="images/icon.png" /> </td>
 					<td id="singleprice" class="third-td">￥111</td>
-					<td class="fourth-td">0</td>
-					<td class="fifth-td">
+					<td class="fourth-td">
 						<p class="proamount">
-							<input id="min" name="" type="button" value="-" />
-							<input type="text" id="amount" value="1" />
-							<input id="add" name="" type="button" value="+" />
+							1
 						</p>
 					</td>
-					<td id="totalprice" class="sixth-td">￥111</td>
-					<td id="deal" class="seventh-td">
-						<a href="#" id="del">删除</a>
-						<a href="#" id="move">移到购物车</a>
+					<td id="totalprice" class="fifth-td">￥111</td>
+					<td id="deal" class="sixth-td">
+						<a href="#" class="del">删除</a>
+						<a href="#" id="saysth">追加评论</a>
 					</td>
 				</tr>
 
-				<tr class="bottom-tr">
-					<td class="integral-award">赠送积分：1000</td>
-					<td class="product-price">商品金额：3678￥</td>
-					<td class="cheaper">已优惠:210￥</td>
-					<td class="integral-now">积分：9999</td>
-					<td><input type="button" id="calculate" value="结算" /></td>
-				</tr>
 
 			</table>
 		</form>
@@ -301,16 +254,6 @@
 				}
 				cbAll.checked = true;
 			}
-
-			$(function() {
-				var t = $(".amount");
-				$(".add").click(function() {
-					t.val(parseInt(t.val()) + 1)
-				})
-				$(".min").click(function() {
-					t.val(parseInt(t.val()) - 1)
-				})
-			});
 
 			$(function() {
 				$(".del").click(function() {
