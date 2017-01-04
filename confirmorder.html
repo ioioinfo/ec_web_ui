@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background-color: rgb(240, 240, 240);
+				font-family: "微软雅黑";
+			}
+			
+			.outsidediv {
+				width: 100%;
+				margin: 0 auto;
+				background-color: white;
+				float: left;
+				position: relative;
+			}
+			
+			.outsidediv p {
+				padding: 0 10px;
+				font-family: "微软雅黑";
+				font-size: 16px;
+			}
+			
+			.add-new-address {
+				width: 235px;
+				height: 145px;
+				border: 1px solid gray;
+				text-align: center;
+				margin: 10px;
+				display: inline-block;
+				float: left;
+			}
+			
+			.add-new-address a {
+				text-decoration: none;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				height: 145px;
+				line-height: 145px;
+			}
+			
+			.mostout {
+				width: 80%;
+				margin: 0 auto;
+				border: 1px solid rgb(240, 240, 240);
+			}
+			
+			.mostout:nth-child(2) {
+				border-top: none;
+			}
+			
+			.confirmdetail {
+				font-family: "微软雅黑";
+				font-size: 16px;
+				display: inline-block;
+				float: left;
+			}
+			
+			.status-div {
+				display: inline-block;
+				float: right;
+				margin-right: 20px;
+			}
+			
+			.status-circle:first-child {
+				width: 10px;
+				height: 10px;
+				border-radius: 5px;
+				background-color: red;
+				display: inline-block;
+				float: left;
+				margin-top: 22px;
+			}
+			
+			.horizontal {
+				display: inline-block;
+				float: left;
+				margin-top: 10px;
+			}
+			
+			.status-circle span {
+				white-space: nowrap;
+				position: relative;
+				top: 10px;
+				right: 30px;
+			}
+			
+			.show-all-address {
+				background-color: rgb(255, 167, 38);
+				padding: 1px 5px 6px 4px;
+				color: white;
+				font-family: "微软雅黑";
+				float: right;
+				margin: 20px;
+				margin-right: 50px;
+			}
+			
+			.add-to {
+				background-color: rgb(232, 78, 64);
+				padding: 1px 5px 6px 4px;
+				color: white;
+				font-family: "微软雅黑";
+				float: right;
+				margin: 20px;
+				margin-right: 50px;
+			}
+			
+			.outsidediv button img {
+				position: relative;
+				top: 5px;
+			}
+			
+			input[type="button" i],
+			input[type="submit" i],
+			input[type="reset" i],
+			input[type="file" i]::-webkit-file-upload-button,
+			button {
+				border-style: none;
+			}
+			
+			#payonline {
+				background-color: rgb(232, 78, 64);
+				color: white;
+				padding: 6px;
+				margin-left: 80px;
+			}
+			
+			#payonline img {
+				position: relative;
+				top: 2px;
+			}
+			
+			table {
+				background-color: white;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				border: 1px solid gray;
+				border-spacing: 0;
+			}
+			
+			tr:last-child {
+				border-bottom: none!important;
+			}
+			
+			.first-td {
+				width: 15%;
+				padding-left: 100px;
+			}
+			
+			.second-td {
+				width: 15%;
+				padding-left: 20px;
+			}
+			
+			.third-td {
+				width: 10%;
+				padding-left: 20px;
+			}
+			
+			.fourth-td {
+				width: 5%;
+				padding-left: 40px;
+				text-align: center;
+			}
+			
+			.fifth-td {
+				padding: 0 20px;
+				width: 15%;
+				text-align: center;
+			}
+			
+			.sixth-td {
+				margin-left: -20px!important;
+				width: 5%;
+				text-align: center;
+			}
+			
+			.seventh-td {
+				width: 10%;
+				text-align: center;
+			}
+			
+			#add {
+				background-color: white;
+				border: 1px solid gray;
+				border-left: none;
+				position: relative;
+				right: 5px;
+			}
+			
+			#min {
+				background-color: white;
+				border: 1px solid gray;
+				border-right: none;
+				position: relative;
+				left: 6px;
+			}
+			
+			#amount {
+				width: 40px;
+				text-align: center;
+				border: 1px solid gray;
+				border-left: none;
+				border-right: none;
+			}
+			
+			#move {
+				position: absolute;
+				top: 15px;
+				right: 15px;
+				white-space: nowrap;
+			}
+			
+			#del {
+				position: relative;
+				bottom: 10px;
+			}
+			
+			#deal {
+				position: relative;
+			}
+			
+			tr:first-child {
+				background-color: black;
+				color: white;
+			}
+			
+			td {
+				display: inline-block;
+				margin: 0!important;
+			}
+			
+			tr {
+				border-bottom: 1px solid gray!important;
+				display: inline-block;
+				width: 100%;
+			}
+			
+			#leavemsg {
+				padding: 2px 10px;
+				width: 40%;
+			}
+			
+			select {
+				padding: 2px;		
+			}
+			
+			#submit {
+				padding: 4px 10px;
+				color: white;
+				background-color: rgb(232, 78, 64);
+				bottom: 10px;
+				right: 10px;
+				position: absolute;
+			}
+			
+			.popover {
+				position: absolute;
+				top: 0;
+				left: 260px;
+				width: 600px;
+				height: 260px;
+				border: 1px solid #696;
+				border-radius:0 0 8px 8px;
+				box-shadow: #666 0px 0px 10px;
+				display: none;
+				z-index: 999;
+			}
+			
+			.headtitle {
+				background-color: rgb(247, 247, 247);
+				width: 100%;
+				padding: 10px 0;
+			}
+			
+			.consignee input{
+				width: 300px;
+			}
+			.consignee span{
+				display: inline-block;
+				width: 100px;
+				text-align: center;
+			}
+			.detail-address input{
+				width: 300px;
+			}
+			.detail-address span{
+				display: inline-block;
+				width: 100px;
+				text-align: center;
+			}
+			.tel input{
+				width: 300px;
+			}
+			.tel span{
+				display: inline-block;
+				width: 100px;
+				text-align: center;
+			}
+			.receive-address span{
+				display: inline-block;
+				width: 100px;
+				text-align: center;
+			}
+			#ok{
+				background-color: rgb(232,78,64);
+				padding: 4px 20px;
+				border-radius: 4px;
+				color: white;
+				margin-left: 180px;
+			}
+			#cancel{
+				background-color: rgb(158,234,106) ;
+				padding: 4px 20px;
+				border-radius: 4px;
+				color: white; 
+				margin-left: 40px;
+			}
+			.popover div:not(:first-child){
+				margin: 10px 0;
+			}
+			.popover button{
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mostout">
+			<p class="confirmdetail">确认订单信息
+				<div class="status-div">
+					<span><span class="status-circle"><span>查看购物车</span></span>
+					<span class="horizontal">___________________</span>
+					<span><span class="status-circle"><span>确认订单信息</span></span>
+					<span class="horizontal">___________________</span>
+					<span><span class="status-circle"><span>完成订单</span></span>
+					</span>
+				</div>
+			</p>
+		</div>
+		<div class="popover">
+					<div class="headtitle">
+						确认收货地址
+					</div>
+					<div class="consignee">
+						<span>收货人：</span><input type="text" id="consignee" />
+					</div>
+					<div class="receive-address">
+						<span>选择地区：</span><select>
+							<option value="">- - -请选择- - -</option>
+						</select>	
+					</div>
+					<div class="detail-address">
+						<span>地址:</span><input type="text" id="address" value="" />
+					</div>
+					<div class="tel">
+						<span>手机/电话:</span><input type="text" id="" value="" />
+					</div>
+					<button id="ok">确认</button><button id="cancel">取消</button>
+				</div>
+		<div class="mostout">
+			<div class="outsidediv">
+				<p>收货地址</p>
+				<div class="ooout"></div>
+				<div class="add-new-address">
+					<a href="#">使用新地址</a>
+				</div>			
+			</div>
+			<div class="outsidediv">
+				<button class="add-to">添加新地址<span><img src="images/plus-button.png"/></span></button>
+				<button class="show-all-address">查看全部地址<span><img src="images/search.png"/></span></button>
+			</div>
+			<div class="outsidediv" style="float: left;background-color: rgb(240,240,240);margin-bottom: 20px;">
+				<p>支付方式</p>
+				<button id="payonline">网上支付 <img src="images/paytig.png"/></button> 支持支付宝、微信、以及各类银行客户端支付
+			</div>
+			<div class="outsidediv" style="background-color: rgb(240,240,240);">
+				<p>商品清单</p>
+			</div>
+			<div class="outsidediv">
+				<form name="form1" method="post" action="">
+					<table width="100%" border="0">
+						<tr bgcolor="#FFF">
+							<td class="first-td">
+								<INPUT name="chkAll" id="chkAll" title="全选" onClick="ChkAllClick('chkSon','chkAll')" type="checkbox" />全选</td>
+							<td class="second-td">物品信息 </td>
+							<td class="third-td">单价(元)</td>
+							<td class="fourth-td">金币</td>
+							<td class="fifth-td">数量</td>
+							<td class="sixth-td">金额(元)</td>
+							<td class="seventh-td">操作</td>
+						</tr>
+						<tr>
+							<td class="first-td">
+								<INPUT name="chkSon" id="chkSon1" type="checkbox" value='1' onclick="ChkSonClick('chkSon','chkAll')" />
+							</td>
+							<td class="second-td"> <img src="images/icon.png" /> </td>
+							<td id="singleprice" class="third-td">￥111</td>
+							<td class="fourth-td">0</td>
+							<td class="fifth-td">
+								<p id="proamount">
+									<input id="min" name="" type="button" value="-" />
+									<input type="text" id="amount" value="1" />
+									<input id="add" name="" type="button" value="+" />
+								</p>
+							</td>
+							<td id="totalprice" class="sixth-td">￥111</td>
+							<td id="deal" class="seventh-td">
+								<a href="#" id="del">删除</a>
+								<a href="#" id="move">移到购物车</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-td">
+								<INPUT name="chkSon" id="chkSon2" type="checkbox" value='2' onclick="ChkSonClick('chkSon','chkAll')" />
+							</td>
+							<td class="second-td"> <img src="images/icon.png" /> </td>
+							<td id="singleprice" class="third-td">￥111</td>
+							<td class="fourth-td">0</td>
+							<td class="fifth-td">
+								<p class="proamount">
+									<input id="min" name="" type="button" value="-" />
+									<input type="text" id="amount" value="1" />
+									<input id="add" name="" type="button" value="+" />
+								</p>
+							</td>
+							<td id="totalprice" class="sixth-td">￥111</td>
+							<td id="deal" class="seventh-td">
+								<a href="#" id="del">删除</a>
+								<a href="#" id="move">移到购物车</a>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="outsidediv" style="margin: 40px 0;background-color: rgb(240,240,240);">
+				<input type="text" id="leavemsg" value="" placeholder="给卖家留言" />
+				<select name="">
+					<option value="">配送方式</option>
+					<option value="">自提</option>
+					<option value="">送货上门</option>
+				</select>
+			</div>
+			<div class="outsidediv">
+				<p>发票信息</p>
+				<p style="margin-left:60px ;">普通发票(纸质)<span style="margin-left: 60px;">个人</span>
+					<a href="#" style="margin-left: 60px;text-decoration: none;">修改</a>
+				</p>
+			</div>
+			<div class="outsidediv" style="background-color: rgb(240,240,240);margin: 40px 0;">
+				<div style="margin: 10px;"><span style="float: right;display: inline-block;">￥5.00</span><span style="float: right;margin-right: 30px;">投保退货运险费，确认收货前退货可赔</span><span style="float: right;margin-right: 30px;">运险费：<input type="checkbox"></span><br /></div>
+				<div style="margin: 10px;"><span style="float: right;">共计：<span style="color: red;font-size: 18px;">￥116</span><span>(含运费)</span></span><br /></div>
+				<div style="margin: 10px;"><span style="float: right;color: rgb(252,118,72);">使用优惠券</span><br /></div>
+				<div style="margin: 10px;"><span style="float: right;"><input type="checkbox" /><span>使用积分抵扣：</span><span style="color: orangered;">￥1</span></span><br /></div>
+				<div style="margin: 10px;"><span style="float: right;">应付金额:￥115</span><br /></div>
+				<div style="margin: 10px;"><span style="float: right;">赠送积分:115</span><br /></div>
+				<div style="margin: 10px;"><span style="float: right;"><input type="checkbox" />找人代付</span><br /></div>
+			</div>
+			<div class="outsidediv" style="height: 100px;">
+				<p style="float: right;">实付款：<span style="color: red;">￥115</span></p>
+				<button id="submit">提交订单</button>
+			</div>
+			<div class="outsidediv" style="margin: 10px 0;background-color: rgb(240,240,240);">
+				<p style="font-size: 14px;">预计到货时间：
+					<span style="float: right;"><span><img src="images/back.png" style="position: relative;top: 2px;"/>返回购物车</span></span>
+				</p>
+
+			</div>
+
+		</div>
+		<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+		<script language="javascript">
+			var addressDiv = "<div style='position: relative;background-color:white;width:235px;height:145px;margin:10px;border:1px solid red;display: inline-block;float:left'><p style='width:80%;margin:0 auto;border-bottom:1px dashed gray;'>何守志</p><p style='width: 80%;margin:0 auto;font-size:14px;padding:10px'>181****123</p><p style='width: 80%;margin:0 auto;font-size:14px;padding:0'>上海市宝山区</p><p style='width: 80%;margin:0 auto;font-size:14px;font-family:'微软雅黑';padding:0'>呼兰路199号103室</p><a href='#' class='default' style='font-size:14px;text-decoration:none;float:right;padding:10px 20px 10px 0;color:dodgerblue;font-family:'微软雅黑''>设为默认</a><a id='delete' href='#' style='font-size:14px;text-decoration:none;float:right;padding:10px 10px 0 0;color:dodgerblue;font-family:'微软雅黑''>删除</a><a href='#' style='font-size:14px;text-decoration:none;float:right;padding:10px 10px 0 0;color:dodgerblue;font-family:'微软雅黑''>修改</a><span style='position:absolute;bottom:-3px;right:0'><img src='images/tigg.png' style='display:none'></span></div>"
+			$(function() {
+				$(".add-new-address a").click(function() {
+					$(".ooout").prepend(addressDiv);
+					setToDefault();
+				})
+			});
+
+			function setToDefault() {
+				$(".default").click(function() {
+					$(".ooout img").hide();
+					var parent = $(this).parent();
+					$("img", parent).show();
+				})
+
+				// --列头全选框被单击---
+				function ChkAllClick(sonName, cbAllId) {
+					var arrSon = document.getElementsByName(sonName);
+					var cbAll = document.getElementById(cbAllId);
+					var tempState = cbAll.checked;
+					for(i = 0; i < arrSon.length; i++) {
+						if(arrSon[i].checked != tempState)
+							arrSon[i].click();
+					}
+				}
+
+				// --子项复选框被单击---
+				function ChkSonClick(sonName, cbAllId) {
+					var arrSon = document.getElementsByName(sonName);
+					var cbAll = document.getElementById(cbAllId);
+					for(var i = 0; i < arrSon.length; i++) {
+						if(!arrSon[i].checked) {
+							cbAll.checked = false;
+							return;
+						}
+					}
+					cbAll.checked = true;
+				}
+
+				$(function() {
+					var t = $(".amount");
+					$(".add").click(function() {
+						t.val(parseInt(t.val()) + 1)
+					})
+					$(".min").click(function() {
+						t.val(parseInt(t.val()) - 1)
+					})
+				});
+
+			};
+
+			$(function() {
+				$(".add-to").click(function() {
+						$(".popover").animate({top:'120px'},800).show().siblings().css("filter","blur(4px)");
+				})
+			});
+			
+			$(function(){
+				$("#cancel").click(function(){
+					$(this).parent().animate({top:'0px'},800).hide().siblings().css("filter","blur(0)");
+				})
+			});
+		</script>
+	</body>
+
+</html>
