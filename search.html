@@ -1,0 +1,642 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.header {
+				background-color: rgb(240, 240, 240);
+				padding: 10px;
+				padding-left: 40px;
+			}
+			
+			body {
+				margin: 0;
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+			
+			p {
+				margin: 0;
+			}
+			
+			.first-select {
+				background-color: rgb(240, 240, 240);
+				border: none;
+				margin-left: 20px;
+				font-family: "微软雅黑";
+				color: gray;
+			}
+			
+			.header a {
+				text-decoration: none;
+				color: deeppink;
+				margin-left: 10px;
+			}
+			
+			#login::before {
+				content: '[';
+			}
+			
+			#login::after {
+				content: ']';
+			}
+			
+			#register::before {
+				content: '[';
+			}
+			
+			#register::after {
+				content: ']';
+			}
+			
+			#ms::before {
+				content: url(images/email.png);
+				padding: 10px 5px 0 10px;
+			}
+			
+			#tel::before {
+				content: url(images/mobilee.png);
+				padding-left: 10px;
+				position: relative;
+				top: 3px;
+			}
+			
+			#myorder {
+				color: black;
+				float: right;
+			}
+			
+			#shopcenter {
+				color: black;
+				float: right;
+			}
+			
+			#CEO-Email {
+				color: black;
+				float: right;
+			}
+			
+			#vip-center {
+				color: black;
+				float: right;
+			}
+			
+			#group {
+				color: black;
+				float: right;
+				margin-right: 10px;
+			}
+			
+			#collect select {
+				border: 1px solid white;
+				padding: 2px;
+				border-radius: 4px;
+				float: right;
+			}
+			
+			#service-center {
+				color: black;
+				float: right;
+			}
+			
+			#guide::before {
+				content: url(images/guide.png);
+				position: relative;
+				top: 3px;
+			}
+			
+			#payattention {
+				color: black;
+				float: right;
+			}
+			
+			#guide {
+				color: black;
+				float: right;
+				margin-right: 20px;
+			}
+			
+			.mostout {
+				width: 90%;
+				margin: 0 auto;
+				position: relative;
+				clear: both;
+			}
+			
+			::-webkit-input-placeholder {
+				/* WebKit browsers */
+			}
+			
+			#search {
+				border: 10px solid deeppink;
+				width: 400px;
+				background: url(images/search-black.png) no-repeat left center;
+				text-indent: 1em;
+				margin-left: 300px;
+				margin-top: 40px;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				outline: none;
+			}
+			
+			button {
+				background-color: deeppink;
+				border: none;
+				padding: 12px;
+				color: white;
+				position: relative;
+				right: 5px;
+				outline: none;
+				font-family: "微软雅黑";
+			}
+			
+			.catalog {
+				position: absolute;
+				bottom: 0;
+				color: white;
+				background-color: red;
+				padding: 4px;
+				width: 18%;
+				text-align: center;
+			}
+			
+			.catalog::before {
+				content: url(images/catalogwhite.png);
+				position: relative;
+				top: 3px;
+				right: 5px;
+			}
+			
+			.catalog::after {
+				content: url(images/arrowdown.png);
+				float: right;
+				position: relative;
+				top: 3px;
+				right: 5px;
+			}
+			
+			.left-img {
+				position: relative;
+				bottom: 40px;
+			}
+			
+			.hot-sales {
+				position: relative;
+				bottom: 100px;
+				left: 350px;
+				color: gray;
+			}
+			
+			.hot-sales span {
+				padding-left: 40px;
+			}
+			
+			td {
+				text-align: center;
+				padding: 10px;
+			}
+			
+			td::after {
+				content: url(images/arrowright.png);
+				float: right;
+				margin-right: 10px;
+			}
+			
+			td::before {
+				content: url(images/starr.png);
+				position: relative;
+				margin-right: 10px;
+			}
+			
+			table {
+				width: 18.8%;
+				float: left;
+			}
+			
+			.container {
+				width: 100%;
+				margin: 0 auto;
+			}
+			/*瀑布流层*/
+			
+			.item img {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			
+			.left-nav {
+				position: fixed;
+				left: -30px;
+				top: 40px;
+				list-style-type: none;
+				text-align: center;
+			}
+			
+			.left-nav li {
+				width: 40px;
+				background-color: red;
+				color: white;
+				border: 1px solid gray;
+				padding: 4px;
+				position: relative;
+			}
+			
+			.left-nav li:not(:first-child) {
+				border-top: none;
+				background-color: white;
+				color: black;
+			}
+			
+			.left-nav li::after {
+				content: url(images/right-bottom.png);
+				position: absolute;
+				right: -1px;
+				bottom: -5px;
+			}
+			
+			.right-nav {
+				position: fixed;
+				right: 4px;
+				top: 100px;
+				background-color: gray;
+				list-style-type: none;
+			}
+			
+			.right-nav li {
+				background-color: gray;
+				color: white;
+				padding: 20px 0;
+			}
+			
+			.right-nav img {
+				position: relative;
+				right: 20px;
+			}
+			
+			.mostout p {
+				padding: 20px;
+				border: 1px solid gray;
+			}
+			
+			.mostout p:nth-child(2) {
+				color: deepskyblue;
+				margin: 20px 0;
+			}
+			
+			.mostout p:nth-child(3) {
+				color: deepskyblue;
+				margin: 20px 0;
+			}
+			
+			.mostout p:nth-child(4) {
+				color: deepskyblue;
+				margin: 20px 0;
+			}
+			
+			.mostout p:nth-child(5) {
+				color: deepskyblue;
+				margin: 20px 0;
+			}
+			
+			.mostout p:nth-child(6) {
+				color: deepskyblue;
+				margin: 20px 0;
+			}
+			
+			select {
+				color: gray;
+				margin-left: 60px;
+			}
+			
+			.mostout p span {
+				padding-left: 60px;
+			}
+			
+			.more {
+				float: right;
+				color: gray;
+			}
+			
+			.more::after {
+				content: url(images/arrowdownn.png);
+				position: relative;
+				top: 3px;
+			}
+			
+			.multiple::after {
+				content: url(images/pluss.png);
+				position: relative;
+				top: 3px;
+			}
+			
+			.multiple {
+				float: right;
+				color: gray;
+			}
+			
+			.spc {
+				margin: 20px 0;
+				padding: 10px!important;
+				background-color: rgb(235, 235, 235);
+			}
+			
+			.spc span {
+				margin-left: 30px;
+			}
+			
+			.spc span::after {
+				content: url(images/arrowdownn.png);
+				position: relative;
+				top: 3px;
+			}
+			
+			.container {
+				width: 100%;
+				margin: 0 auto;
+			}
+			/*瀑布流层*/
+			
+			.waterfall {
+				-moz-column-count: 4;
+				/* Firefox */
+				-webkit-column-count: 4;
+				/* Safari 和 Chrome */
+				column-count: 4;
+				-moz-column-gap: 1em;
+				-webkit-column-gap: 1em;
+				column-gap: 1em;
+			}
+			/*一个内容层*/
+			
+			.item {
+				padding: 1em;
+				margin: 0 0 1em 0;
+				-moz-page-break-inside: avoid;
+				-webkit-column-break-inside: avoid;
+				break-inside: avoid;
+				border: none;
+			}
+			
+			.item img {
+				width: 100%;
+				height: 120px;
+				margin-bottom: 10px;
+			}
+			
+			.payattention::before {
+				content: url(images/love.png);
+				position: relative;
+				top: 3px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="header">
+			<p>送货至
+				<select class="first-select">
+					<option>上海</option>
+				</select>
+				<a href="#" id="login">
+					登陆
+				</a>
+				<a href="#" id="register">
+					注册
+				</a>
+				<span id="ms">消息</span><span id="msg">1</span>
+				<span id="tel">手机版</span>
+				<a href="#" id="guide">网站导航</a>
+				<a href="#" id="payattention">关注</a>
+				<a href="#" id="service-center">客服中心</a>
+				<a href="#" id="collect">
+					<select>
+						<option>收藏夹</option>
+					</select>
+				</a>
+				<a href="#" id="group">社区</a>
+				<a href="#" id="vip-center">会员中心</a>
+				<a href="#" id="CEO-Email">CEO邮箱</a>
+				<a href="#" id="shopcenter">商家中心</a>
+				<a href="#" id="myorder">我的订单</a>
+			</p>
+		</div>
+		<div class="mostout">
+			<input type="search" name="" id="search" required="" placeholder="商品搜索" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN">
+			<button id="searchbtn" onclick="srch()">点击搜索</button>
+			<div class="catalog">产品分类</div>
+			<div class="left-img"><img src="images/icon.png" /></div>
+			<div class="hot-sales"><span>热门搜索</span><span>香蕉</span><span>苹果</span><span>橘子</span></div>
+		</div>
+		<div class="mostout">
+			<p>所有商品>商品分类>具体商品</p>
+			<p>适用年龄：<span>2岁</span><span>3岁</span><span>6岁</span><span>10岁</span><span>14岁以上</span><span class="multiple">多选</span><span class="more">更多</span></p>
+			<p>品牌：<span>品牌一</span><span>品牌二</span><span>品牌三</span><span class="multiple">多选</span><span class="more">更多</span></p>
+			<p>分类：<span class="multiple">多选</span></p>
+			<p>颜色：<span>颜色一</span><span class="multiple">多选</span></p>
+			<p>高级选项:
+				<select name="">
+					<option value="">价格</option>
+				</select>
+				<select name="">
+					<option value="">年龄</option>
+				</select>
+				<select name="">
+					<option value="">材质</option>
+				</select>
+			</p>
+			<p class="spc">综合<span>人气</span><span>销量</span><span>信用</span><span>价格</span><span>评论数</span>
+				<select name="">
+					<option value="">发货地</option>
+				</select>
+				<span>共100件商品</span>
+			</p>
+			<p style="border: none;margin-top: -40px;">
+				<select name="" style="margin-left: 0;border: none;">
+					<option value="">送货至</option>
+				</select>
+				<input type="checkbox" id="" value="" style="margin-left: 60px;width: auto;" />货到付款
+				<input type="checkbox" id="" value="" style="margin-left: 60px;width: auto;" />包邮
+				<input type="checkbox" id="" value="" style="margin-left: 60px;width: auto;" />赠运费险
+				<input type="checkbox" id="" value="" style="margin-left: 60px;width: auto;" />文字
+				<input type="checkbox" id="" value="" style="margin-left: 60px;width: auto;" />有货
+			</p>
+		</div>
+		<ul class="left-nav">
+			<li>商品分类</li>
+			<li>天天特惠</li>
+			<li>商品推荐</li>
+			<li>商品一级导航</li>
+			<li>商品一级导航</li>
+			<li>商品一级导航</li>
+			<li>商品一级导航</li>
+		</ul>
+		<ul class="right-nav">
+			<li><img src="images/server.png" /></li>
+			<li><img src="images/buycar.png" /></li>
+			<li><img src="images/usericonw.png" /></li>
+			<li><img src="images/bankcardw.png" /></li>
+			<li><img src="images/lovew.png" /></li>
+			<li><img src="images/two-dimensionw.png" /></li>
+			<li><img src="images/arrowup.png" /></li>
+		</ul>
+		<div class="mostout">
+			<div class="container">
+				<div class="waterfall">
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+						<span style="color: gray;">1比1仿造中国99式坦克，带有一定的攻击性</span>
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">已有0条评论<span style="float: right;">已售出0件</span></p>
+						<input type="checkbox" id="" value="" />对比
+						<span class="payattention">关注</span>
+						<span>加入购物车</span>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+						<span style="color: gray;">1比1仿造中国99式坦克，带有一定的攻击性</span>
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">已有0条评论<span style="float: right;">已售出0件</span></p>
+						<input type="checkbox" id="" value="" />对比
+						<span class="payattention">关注</span>
+						<span>加入购物车</span>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+						<span style="color: gray;">1比1仿造中国99式坦克，带有一定的攻击性</span>
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">已有0条评论<span style="float: right;">已售出0件</span></p>
+						<input type="checkbox" id="" value="" />对比
+						<span class="payattention">关注</span>
+						<span>加入购物车</span>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+						<span style="color: gray;">1比1仿造中国99式坦克，带有一定的攻击性</span>
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">已有0条评论<span style="float: right;">已售出0件</span></p>
+						<input type="checkbox" id="" value="" />对比
+						<span class="payattention">关注</span>
+						<span>加入购物车</span>
+					</div>
+					
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+						<span style="color: gray;">1比1仿造中国99式坦克，带有一定的攻击性</span>
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">已有0条评论<span style="float: right;">已售出0件</span></p>
+						<input type="checkbox" id="" value="" />对比
+						<span class="payattention">关注</span>
+						<span>加入购物车</span>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+						<span style="color: gray;">1比1仿造中国99式坦克，带有一定的攻击性</span>
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">已有0条评论<span style="float: right;">已售出0件</span></p>
+						<input type="checkbox" id="" value="" />对比
+						<span class="payattention">关注</span>
+						<span>加入购物车</span>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+						<span style="color: gray;">1比1仿造中国99式坦克，带有一定的攻击性</span>
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">已有0条评论<span style="float: right;">已售出0件</span></p>
+						<input type="checkbox" id="" value="" />对比
+						<span class="payattention">关注</span>
+						<span>加入购物车</span>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+						<span style="color: gray;">1比1仿造中国99式坦克，带有一定的攻击性</span>
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">已有0条评论<span style="float: right;">已售出0件</span></p>
+						<input type="checkbox" id="" value="" />对比
+						<span class="payattention">关注</span>
+						<span>加入购物车</span>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="mostout">
+			<p style="border: none;font-weight: 700;font-size: 16px;">精品推荐</p>
+			<div class="container" style="border: 1px solid gray;">
+				<div class="waterfall">
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">商品名称<span style="float: right;">已有0条评论</span></p>	
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">商品名称<span style="float: right;">已有0条评论</span></p>	
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">商品名称<span style="float: right;">已有0条评论</span></p>	
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">商品名称<span style="float: right;">已有0条评论</span></p>	
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mostout">
+			<p style="border: none;font-weight: 700;font-size: 16px;">猜你喜欢</p>
+			<div class="container" style="border: 1px solid gray;">
+				<div class="waterfall">
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">商品名称<span style="float: right;">已有0条评论</span></p>	
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">商品名称<span style="float: right;">已有0条评论</span></p>	
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">商品名称<span style="float: right;">已有0条评论</span></p>	
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+					</div>
+
+					<div class="item">
+						<img src="images/icon.png">
+						<p style="color: black;margin:0;padding: 5px 0;border: none;">商品名称<span style="float: right;">已有0条评论</span></p>	
+						<p style="color: red;border: none;margin: 0;padding: 10px 0;">￥999</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+		<script language="javascript">
+			function srch() {
+				$("#searchbtn").click(function() {
+					$("#search").focus();
+				})
+			}
+		</script>
+	</body>
+
+</html>

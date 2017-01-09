@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.header {
+				background-color: rgb(240, 240, 240);
+				padding: 10px;
+				padding-left: 40px;
+			}
+			
+			body {
+				margin: 0;
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+			
+			p {
+				margin: 0;
+			}
+			
+			.first-select {
+				background-color: rgb(240, 240, 240);
+				border: none;
+				margin-left: 20px;
+				font-family: "微软雅黑";
+				color: gray;
+			}
+			
+			.header a {
+				text-decoration: none;
+				color: deeppink;
+				margin-left: 10px;
+			}
+			
+			#login::before {
+				content: '[';
+			}
+			
+			#login::after {
+				content: ']';
+			}
+			
+			#register::before {
+				content: '[';
+			}
+			
+			#register::after {
+				content: ']';
+			}
+			
+			#ms::before {
+				content: url(images/email.png);
+				padding: 10px 5px 0 10px;
+			}
+			
+			#tel::before {
+				content: url(images/mobilee.png);
+				padding-left: 10px;
+				position: relative;
+				top: 3px;
+			}
+			
+			#myorder {
+				color: black;
+				float: right;
+			}
+			
+			#shopcenter {
+				color: black;
+				float: right;
+			}
+			
+			#CEO-Email {
+				color: black;
+				float: right;
+			}
+			
+			#vip-center {
+				color: black;
+				float: right;
+			}
+			
+			#group {
+				color: black;
+				float: right;
+				margin-right: 10px;
+			}
+			
+			#collect select {
+				border: 1px solid white;
+				padding: 2px;
+				border-radius: 4px;
+				float: right;
+			}
+			
+			#service-center {
+				color: black;
+				float: right;
+			}
+			
+			#guide::before {
+				content: url(images/guide.png);
+				position: relative;
+				top: 3px;
+			}
+			
+			#payattention {
+				color: black;
+				float: right;
+			}
+			
+			#guide {
+				color: black;
+				float: right;
+				margin-right: 20px;
+			}
+			
+			.mostout {
+				width: 90%;
+				margin: 0 auto;
+				position: relative;
+				clear: both;
+			}
+			
+			::-webkit-input-placeholder {
+				/* WebKit browsers */
+			}
+			
+			input {
+				border: 10px solid deeppink;
+				width: 400px;
+				background: url(images/search-black.png) no-repeat left center;
+				text-indent: 1em;
+				margin-left: 300px;
+				margin-top: 40px;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				outline: none;
+			}
+			
+			button {
+				background-color: deeppink;
+				border: none;
+				padding: 12px;
+				color: white;
+				position: relative;
+				right: 5px;
+				outline: none;
+				font-family: "微软雅黑";
+			}
+			
+			.catalog {
+				position: absolute;
+				bottom: 0;
+				color: white;
+				background-color: red;
+				padding: 4px;
+				width: 18%;
+				text-align: center;
+			}
+			
+			.hot-sales {
+				position: relative;
+				bottom: 100px;
+				left: 350px;
+				color: gray;
+			}
+			
+			.hot-sales span {
+				padding-left: 40px;
+				position: relative;
+				top: 40px;
+			}
+			
+			.container {
+				width: 80%;
+				margin: 0 auto;
+			}
+			/*瀑布流层*/
+			
+			table {
+				table-layout: fixed;
+			}
+			
+			.p-spc {
+				padding: 18px 0;
+				font-size: 16px;
+				font-weight: 600;
+				border-bottom: 5px solid deeppink;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="header">
+			<p>送货至
+				<select class="first-select">
+					<option>上海</option>
+				</select>
+				<a href="#" id="login">
+					登陆
+				</a>
+				<a href="#" id="register">
+					注册
+				</a>
+				<span id="ms">消息</span><span id="msg">1</span>
+				<span id="tel">手机版</span>
+				<a href="#" id="guide">网站导航</a>
+				<a href="#" id="payattention">关注</a>
+				<a href="#" id="service-center">客服中心</a>
+				<a href="#" id="collect">
+					<select>
+						<option>收藏夹</option>
+					</select>
+				</a>
+				<a href="#" id="group">社区</a>
+				<a href="#" id="vip-center">会员中心</a>
+				<a href="#" id="CEO-Email">CEO邮箱</a>
+				<a href="#" id="shopcenter">商家中心</a>
+				<a href="#" id="myorder">我的订单</a>
+			</p>
+		</div>
+		<div class="mostout">
+			<input type="search" name="" id="search" required="" placeholder="商品搜索" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN">
+			<button id="searchbtn" onclick="srch()">点击搜索</button>
+			<div class="hot-sales"><span>热门搜索</span><span>香蕉</span><span>苹果</span><span>橘子</span></div>
+		</div>
+
+		<div class="mostout">
+			<p class="p-spc">天天特惠</p>
+			<table class="container" cellpadding="20px 0">
+				<tr>
+					<td>特步</td>
+					<td>安踏</td>
+					<td>李宁</td>
+					<td>贵人鸟</td>
+					<td>花花公子</td>
+					<td>乔丹</td>
+					<td>波司登</td>
+					<td>future21</td>
+				</tr>
+					<tr>
+					<td>特步</td>
+					<td>安踏</td>
+					<td>李宁</td>
+					<td>贵人鸟</td>
+					<td>花花公子</td>
+					<td>乔丹</td>
+					<td>波司登</td>
+					<td>future21</td>
+				</tr>
+				<tr>
+					<td>特步</td>
+					<td>安踏</td>
+					<td>李宁</td>
+					<td>贵人鸟</td>
+					<td>花花公子</td>
+					<td>乔丹</td>
+					<td>波司登</td>
+					<td>future21</td>
+				</tr>
+			</table>
+			<p class="p-spc" style="border-bottom: 5px solid rgb(3,155,229);">男装</p>
+			<table class="container" cellpadding="20px 0">
+				<tr>
+					<td>特步</td>
+					<td>安踏</td>
+					<td>李宁</td>
+					<td>贵人鸟</td>
+					<td>花花公子</td>
+					<td>乔丹</td>
+					<td>波司登</td>
+					<td>future21</td>
+				</tr>
+				<tr>
+					<td>特步</td>
+					<td>安踏</td>
+					<td>李宁</td>
+					<td>贵人鸟</td>
+					<td>花花公子</td>
+					<td>乔丹</td>
+					<td>波司登</td>
+					<td>future21</td>
+				</tr>
+				<tr>
+					<td>特步</td>
+					<td>安踏</td>
+					<td>李宁</td>
+					<td>贵人鸟</td>
+					<td>花花公子</td>
+					<td>乔丹</td>
+					<td>波司登</td>
+					<td>future21</td>
+				</tr>
+			</table>
+				<p class="p-spc" style="border-bottom: 5px solid rgb(251,140,0);">飞机</p>
+			<table class="container" cellpadding="20px 0">
+				<tr>
+					<td>特步</td>
+					<td>安踏</td>
+					<td>李宁</td>
+					<td>贵人鸟</td>
+					<td>花花公子</td>
+					<td>乔丹</td>
+					<td>波司登</td>
+					<td>future21</td>
+				</tr>
+				<tr>
+					<td>特步</td>
+					<td>安踏</td>
+					<td>李宁</td>
+					<td>贵人鸟</td>
+					<td>花花公子</td>
+					<td>乔丹</td>
+					<td>波司登</td>
+					<td>future21</td>
+				</tr>
+				<tr>
+					<td>特步</td>
+					<td>安踏</td>
+					<td>李宁</td>
+					<td>贵人鸟</td>
+					<td>花花公子</td>
+					<td>乔丹</td>
+					<td>波司登</td>
+					<td>future21</td>
+				</tr>
+			</table>
+		</div>
+
+		<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+		<script language="javascript">
+			function srch() {
+				$("#searchbtn").click(function() {
+					$("#search").focus();
+				})
+			}
+		</script>
+	</body>
+
+</html>
